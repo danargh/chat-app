@@ -1,16 +1,39 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import TextInputView from "@/components/form/TextInputView.vue";
+
+const form = {
+   email: "",
+   password: "",
+};
+
+const registerHandler = () => {
+   console.log(form);
+};
+</script>
 
 <template>
    <div>
       <h2>Register</h2>
-      <form>
+      <form @submit.prevent="registerHandler">
          <div class="input--divider">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
+            <TextInputView
+               type="email"
+               id="email"
+               name="email"
+               label="Email"
+               v-model="form.email"
+               required
+            />
          </div>
          <div class="input--divider">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required />
+            <TextInputView
+               type="password"
+               id="password"
+               name="password"
+               label="Password"
+               v-model="form.password"
+               required
+            />
          </div>
          <button type="submit">Register</button>
       </form>

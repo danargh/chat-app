@@ -26,7 +26,7 @@ defineProps({
 
 <style scoped>
 input {
-   padding: 5px;
+   padding: 0.5rem;
    border: 1px solid hsla(160, 100%, 37%, 1);
    border-radius: 5px;
    background-color: var(--vt-c-indigo);

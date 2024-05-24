@@ -3,8 +3,8 @@ import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
+   <RouterView class="router--view" />
    <header>
-      <RouterView class="router--view" />
       <nav>
          <RouterLink to="/">Home</RouterLink>
          <RouterLink to="/about">About</RouterLink>
@@ -28,6 +28,7 @@ router--view {
 nav {
    display: flex;
    justify-content: center;
+   margin: 0 auto;
    gap: 1rem;
    padding-top: 1rem;
 }
